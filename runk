@@ -1,0 +1,38 @@
+import Main.addElements
+
+fun main() {
+    val frame = JFrame("Periodic Table - Groups 1 to 10")
+    frame.setSize(800, 800)
+    frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+    frame.layout = GridBagLayout()
+    val gbc = GridBagConstraints()
+    gbc.insets = Insets(2, 2, 2, 2)
+    gbc.fill = GridBagConstraints.BOTH
+    gbc.weightx = 1.0
+    gbc.weighty = 1.0
+
+    val group1 = arrayOf("H", "Li", "Na", "K", "Rb", "Cs", "Fr")
+    val pastelOrange = Color(255, 209, 178)
+
+    for (i in group1.indices) {
+        val button = JButton(group1[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelOrange
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelOrange)
+        gbc.gridx = 1
+        gbc.gridy = i + 2
+
+        if (group1[i] == "H") {
+            addHydrogenButton(button, gbc, frame)
+        } else {
+            frame.add(button, gbc)
+        }
+    }
+
+    addElements(frame, gbc) // فراخوانی تابع برای افزودن عناصر دیگر
+
+    frame.pack()
+    frame.isVisible = true
+}
