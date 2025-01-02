@@ -1,0 +1,17 @@
+import javax.swing.JFrame
+import javax.swing.JButton
+import java.awt.GridBagConstraints
+
+fun showHydrogenPage() {
+    val hydrogenFrame = JFrame("Hydrogen")
+    hydrogenFrame.setSize(400, 400)
+    hydrogenFrame.defaultCloseOperation = JFrame.DISPOSE_ON_CLOSE
+    hydrogenFrame.isVisible = true
+}
+
+fun addHydrogenButton(button: JButton, gbc: GridBagConstraints, frame: JFrame) {
+    button.addActionListener {
+        showHydrogenPage()
+    }
+    frame.add(button, gbc)
+}
