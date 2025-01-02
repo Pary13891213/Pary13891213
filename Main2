@@ -1,0 +1,59 @@
+import javax.swing.JButton
+import java.awt.Color
+import java.awt.Dimension
+import java.awt.Font
+import java.awt.GridBagConstraints
+import javax.swing.BorderFactory
+
+
+fun addButtons(frame: JFrame, gbc: GridBagConstraints) {
+    // افزودن دکمه جدید
+    val customButton = JButton()
+    customButton.preferredSize = Dimension(853, 27)
+    customButton.font = Font("Arial", Font.PLAIN, 14)
+    customButton.background = Color.WHITE
+    customButton.isOpaque = true
+    customButton.border = BorderFactory.createEmptyBorder()
+    gbc.gridx = 3
+    gbc.gridy = 12
+    frame.add(customButton, gbc)
+
+    // افزودن دکمه‌های جدید با پس‌زمینه سفید
+    val newButton1 = JButton()
+    val newButton2 = JButton()
+    val newButton3 = JButton()
+    val newButton4 = JButton()
+    val newButton5 = JButton()
+
+    val buttons = arrayOf(newButton1, newButton2, newButton3, newButton4, newButton5)
+    for (button in buttons) {
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = Color.WHITE
+        button.isOpaque = true
+        button.border = BorderFactory.createEmptyBorder()
+    }
+
+    gbc.gridx = 0
+    gbc.gridy = 0
+    frame.add(newButton2, gbc)
+
+    gbc.gridx = 19
+    gbc.gridy = 0
+    frame.add(newButton1, gbc)
+
+    gbc.gridx = 4
+    gbc.gridy = 1
+    frame.add(newButton4, gbc)
+
+    gbc.gridx = 5
+    gbc.gridy = 2
+    frame.add(newButton5, gbc)
+
+    gbc.gridx = 3
+    gbc.gridy = 15
+    frame.add(newButton3, gbc)
+
+    // تنظیم پس‌زمینه برای فریم
+    frame.contentPane.background = Color.WHITE
+}
