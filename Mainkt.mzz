@@ -1,0 +1,363 @@
+// Main.kt
+import javax.swing.JButton
+import javax.swing.JFrame
+import javax.swing.JPanel
+import java.awt.Color
+import java.awt.Dimension
+import java.awt.Font
+import java.awt.GridBagConstraints
+import java.awt.GridBagLayout
+import java.awt.Insets
+import javax.swing.BorderFactory
+import Main2.addButtons
+
+
+fun main() {
+    // تنظیمات فریم اصلی
+    val frame = JFrame("Periodic Table - Groups 1 to 10")
+    frame.setSize(800, 800)
+    frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+    frame.layout = GridBagLayout()
+    val gbc = GridBagConstraints()
+    gbc.insets = Insets(2, 2, 2, 2) // فاصله بین دکمه‌ها
+    gbc.fill = GridBagConstraints.BOTH
+    gbc.weightx = 1.0
+    gbc.weighty = 1.0
+
+    // تعریف عناصر گروه اول تا نهم
+    val group1 = arrayOf("H", "Li", "Na", "K", "Rb", "Cs", "Fr")
+    val group2 = arrayOf("Be", "Mg", "Ca", "Sr", "Ba", "Ra")
+    val group3 = arrayOf("Sc", "Y")
+    val group4 = arrayOf("Ti", "Zr", "Hf", "Rf")
+    val group5 = arrayOf("V", "Nb", "Ta", "Db")
+    val group6 = arrayOf("Cr", "Mo", "W", "Sg")
+    val group7 = arrayOf("Mn", "Tc", "Re", "Bh")
+    val group8 = arrayOf("Fe", "Ru", "Os", "Hs")
+    val group9 = arrayOf("Co", "Rh", "Ir", "Mt")
+    val group10 = arrayOf("Ni", "Pd", "Pt", "Ds")
+    val group11 = arrayOf("Cu", "Ag", "Au", "Rg")
+    val group12 = arrayOf("Zn", "Cd", "Hg", "Cn")
+    val group13 = arrayOf("B", "Al", "Ga", "In", "Tl", "Nh")
+    val group14 = arrayOf("C", "Si", "Ge", "Sn", "Pb", "Fl")
+    val group15 = arrayOf("N", "P", "As", "Sb", "Bi", "Mc")
+    val group16 = arrayOf("O", "S", "Se", "Te", "Po", "Lv")
+    val group17 = arrayOf("F", "Cl", "Br", "I", "At", "Ts")
+    val group18 = arrayOf("He", "Ne", "Ar", "Kr", "Xe", "Rn", "Og")
+    val lanthanides = arrayOf("La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu")
+    val actinides = arrayOf("Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr")
+
+    // رنگ‌ها
+    val pastelOrange = Color(255, 209, 178)
+    val pastelYellow = Color(255, 255, 153)
+    val pastelRed = Color(255, 182, 193)
+    val pastelGray = Color(192, 192, 192)
+    val pastelTurquoise = Color(158, 227, 187)
+    val pastelBlue = Color(173, 216, 230)
+    val pastelGreen = Color(144, 238, 144)
+    val pastelPurple = Color(216, 191, 216)
+    val pastelGold = Color(255, 223, 186)
+    val pastelPink = Color(255, 192, 203)
+
+    // افزودن عناصر گروه اول
+    for (i in group1.indices) {
+        val button = JButton(group1[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelOrange
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelOrange)
+        gbc.gridx = 1
+        gbc.gridy = i + 2
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه دوم
+    for (i in group2.indices) {
+        val button = JButton(group2[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelYellow
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelYellow)
+        gbc.gridx = 2
+        gbc.gridy = i + 3
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه سوم
+    for (i in group3.indices) {
+        val button = JButton(group3[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 3
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه چهارم
+    for (i in group4.indices) {
+        val button = JButton(group4[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 4
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه پنجم
+    for (i in group5.indices) {
+        val button = JButton(group5[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 5
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه ششم
+    for (i in group6.indices) {
+        val button = JButton(group6[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 6
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه هفتم
+    for (i in group7.indices) {
+        val button = JButton(group7[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 7
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه هشتم
+    for (i in group8.indices) {
+        val button = JButton(group8[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(pastelRed)
+        gbc.gridx = 8
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه نهم
+    for (i in group9.indices) {
+        val button = JButton(group9[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = if (group9[i] == "Mt") pastelGray else pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(if (group9[i] == "Mt") pastelGray else pastelRed)
+        gbc.gridx = 9
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه دهم
+    for (i in group10.indices) {
+        val button = JButton(group10[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = if (group10[i] == "Ds") pastelGray else pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(if (group10[i] == "Ds") pastelGray else pastelRed)
+        gbc.gridx = 10
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه یازدهم
+    for (i in group11.indices) {
+        val button = JButton(group11[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = if (group11[i] == "Rg") pastelGray else pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(if (group11[i] == "Rg") pastelGray else pastelRed)
+        gbc.gridx = 11
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه دوازدهم
+    for (i in group12.indices) {
+        val button = JButton(group12[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = if (group12[i] == "Cn") pastelGray else pastelRed
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(if (group12[i] == "Cn") pastelGray else pastelRed)
+        gbc.gridx = 12
+        gbc.gridy = i + 5
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر گروه سیزدهم
+    for (i in group13.indices) {
+        val button = JButton(group13[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group13[i]) {
+            "Nh" -> pastelGray
+            "B" -> pastelTurquoise
+            else -> pastelBlue
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 13
+        gbc.gridy = i + 3
+        frame.add(button, gbc) // این خط باید اضافه شود
+    }
+
+    // افزودن عناصر گروه چهاردهم
+    for (i in group14.indices) {
+        val button = JButton(group14[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group14[i]) {
+            "C" -> pastelGreen
+            "Si", "Ge" -> pastelTurquoise
+            "Sn", "Pb" -> pastelBlue
+            "Fl" -> pastelGray
+            else -> pastelRed
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 14
+        gbc.gridy = i + 3
+        frame.add(button, gbc) // این خط باید اضافه شود
+    }
+    // افزودن عناصر گروه پانزدهم
+    for (i in group15.indices) {
+        val button = JButton(group15[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group15[i]) {
+            "N", "P" -> pastelGreen
+            "As", "Sb" -> pastelTurquoise
+            "Bi" -> pastelBlue
+            "Mc" -> pastelGray
+            else -> pastelRed
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 15
+        gbc.gridy = i + 3
+        gbc.fill = GridBagConstraints.BOTH
+        gbc.weightx = 1.0
+        gbc.weighty = 1.0
+        frame.add(button, gbc)
+    }
+    // افزودن عناصر گروه شانزدهم
+    for (i in group16.indices) {
+        val button = JButton(group16[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group16[i]) {
+            "O", "S", "Se" -> pastelGreen
+            "Te" -> pastelTurquoise
+            "Po" -> pastelBlue
+            "Lv" -> pastelGray
+            else -> pastelRed
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 16
+        gbc.gridy = i + 3
+        gbc.fill = GridBagConstraints.BOTH
+        gbc.weightx = 1.0
+        gbc.weighty = 1.0
+        frame.add(button, gbc)
+    }
+    // افزودن عناصر گروه هفدهم
+    for (i in group17.indices) {
+        val button = JButton(group17[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group17[i]) {
+            "F", "Cl", "Br", "I" -> pastelGreen
+            "At" -> pastelTurquoise
+            "Ts" -> pastelGray
+            else -> pastelRed
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 17
+        gbc.gridy = i + 3
+        gbc.fill = GridBagConstraints.BOTH
+        gbc.weightx = 1.0
+        gbc.weighty = 1.0
+        frame.add(button, gbc)
+    }
+// افزودن عناصر گروه هجدهم
+    for (i in group18.indices) {
+        val button = JButton(group18[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = when (group18[i]) {
+            "He", "Ne", "Ar", "Kr", "Xe", "Rn" -> pastelPurple
+            "Og" -> pastelGray
+            else -> pastelRed
+        }
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = 18
+        gbc.gridy = i + 2
+        gbc.fill = GridBagConstraints.BOTH
+        gbc.weightx = 1.0
+        gbc.weighty = 1.0
+        frame.add(button, gbc)
+    }
+// افزودن عناصر لانتانیدها
+    for (i in lanthanides.indices) {
+        val button = JButton(lanthanides[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelGold
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = i + 3
+        gbc.gridy = 13 // تغییر به 11 برای ایجاد فاصله
+        frame.add(button, gbc)
+    }
+
+    // افزودن عناصر آکتنیدها
+    for (i in actinides.indices) {
+        val button = JButton(actinides[i])
+        button.preferredSize = Dimension(55, 55)
+        button.font = Font("Arial", Font.PLAIN, 14)
+        button.background = pastelPink
+        button.isOpaque = true
+        button.border = BorderFactory.createLineBorder(button.background)
+        gbc.gridx = i+ 3
+        gbc.gridy = 14
+        frame.add(button, gbc)
+    }
+    // بعد از افزودن آکتنیدها
+    addButtons(frame, gbc)
+
+    frame.pack() 
+    frame.isVisible = true
+}
